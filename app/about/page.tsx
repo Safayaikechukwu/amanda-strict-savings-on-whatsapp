@@ -6,16 +6,16 @@ import { copy } from "@/lib/copy";
 import { siteConfig, supportWhatsAppUrl, whatsappJoinUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Udara",
+  title: "About Amanda",
   description:
-    "Udara is a WhatsApp-based strict savings AI agent by Udara Technologies in Nigeria. Funds are held with Rubies Microfinance Bank. Hard-locks transfers from 7PM. NDPC/DCP/11710.",
+    "Amanda is a WhatsApp-based strict savings AI agent by Amanda Technologies in Nigeria. Funds are held with Rubies Microfinance Bank. Hard-locks transfers from 7PM. NDPC/DCP/11710.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Udara | Strict savings on WhatsApp",
+    title: "About Amanda | Strict savings on WhatsApp",
     description:
-      "What Udara is, who built it, how funds are held, and how to join on WhatsApp.",
+      "What Amanda is, who built it, how funds are held, and how to join on WhatsApp.",
     url: "/about",
   },
 };
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const aboutJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: "About Udara",
+  name: "About Amanda",
   url: `${siteConfig.url}/about`,
   description: siteConfig.description,
   mainEntity: {
@@ -45,17 +45,17 @@ export default function AboutPage() {
       <section className="px-4 pb-8 pt-10 sm:px-6 sm:pb-12 sm:pt-16">
         <div className="mx-auto w-full max-w-[720px]">
           <p className="text-[13px] font-medium text-[#6b6b6b] sm:text-[14px]">
-            About Udara
+            About Amanda
           </p>
           <h1 className="mt-2 text-balance text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.04em] text-ink sm:text-[3rem]">
-            Udara is strict savings on WhatsApp.
+            Amanda is strict savings on WhatsApp.
           </h1>
           <p className="mt-5 text-pretty text-[17px] leading-relaxed text-muted sm:text-[19px]">
             {siteConfig.description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href={whatsappJoinUrl} className="h-11 min-h-11 rounded-[6px]">
-              Join Udara
+              Join Amanda
             </Button>
             <Button
               href={supportWhatsAppUrl}
@@ -72,7 +72,7 @@ export default function AboutPage() {
         <div className="mx-auto grid w-full max-w-[720px] gap-10">
           <div>
             <h2 className="text-[1.35rem] font-bold tracking-[-0.03em] text-ink sm:text-[1.5rem]">
-              What Udara is
+              What Amanda is
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-muted">
               {copy.faq.items[0].answer}
@@ -142,13 +142,13 @@ export default function AboutPage() {
 
           <div className="rounded-[12px] bg-[#f7f6f3] px-5 py-5 sm:px-6">
             <p className="text-[15px] leading-relaxed text-ink/80">
-              For the research that shaped Udara&apos;s locks and accountability
+              For the research that shaped Amanda&apos;s locks and accountability
               design, see{" "}
               <Link
                 href="/science"
                 className="font-medium text-[#4a0508] underline underline-offset-[3px]"
               >
-                The science behind Udara
+                The science behind Amanda
               </Link>
               . Privacy details:{" "}
               <Link

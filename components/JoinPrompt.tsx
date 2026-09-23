@@ -6,7 +6,7 @@ import { copy } from "@/lib/copy";
 import { whatsappJoinUrl } from "@/lib/site";
 
 /** Bump to force the prompt to show again for returning visitors. */
-const STORAGE_KEY = "udara-join-prompt-v1";
+const STORAGE_KEY = "amanda-join-prompt-v1";
 const COOLDOWN_HOURS = 24;
 /** After the sheet appears, wait before X / "Not now" unlock. */
 const UNLOCK_AFTER_MS = 8000;
@@ -115,12 +115,12 @@ export function JoinPrompt() {
 
   return createPortal(
     <div
-      id="udara-join-prompt"
+      id="amanda-join-prompt"
       role="dialog"
       aria-modal="true"
       aria-labelledby="join-prompt-title"
       aria-describedby="join-prompt-body"
-      className="udara-join-prompt fixed inset-x-0 bottom-0 z-[9999] text-center text-white sm:inset-x-auto sm:bottom-8 sm:left-1/2 sm:w-[min(440px,calc(100vw-2rem))] sm:-translate-x-1/2 sm:rounded-[20px] sm:border sm:border-white/10 sm:shadow-[0_24px_80px_rgba(74,5,8,0.45)]"
+      className="amanda-join-prompt fixed inset-x-0 bottom-0 z-[9999] text-center text-white sm:inset-x-auto sm:bottom-8 sm:left-1/2 sm:w-[min(440px,calc(100vw-2rem))] sm:-translate-x-1/2 sm:rounded-[20px] sm:border sm:border-white/10 sm:shadow-[0_24px_80px_rgba(74,5,8,0.45)]"
       style={{
         // Pixel-matched to logo mark background (public/oxblood-swatch.png)
         backgroundColor: "#4a0508",

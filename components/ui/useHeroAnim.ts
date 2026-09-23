@@ -3,16 +3,16 @@
 import { useSyncExternalStore } from "react";
 import {
   FAMILY_THREAD,
-  UDARA_THREAD,
+  AMANDA_THREAD,
 } from "@/components/ui/heroWhatsAppData";
 
-export type HeroPhase = "list" | "family" | "udara";
+export type HeroPhase = "list" | "family" | "amanda";
 
 export type HeroAnimState = {
   phase: HeroPhase;
   activeId: string;
   familyCount: number;
-  udaraCount: number;
+  amandaCount: number;
   typing: boolean;
   done: boolean;
 };
@@ -21,28 +21,28 @@ const INITIAL: HeroAnimState = {
   phase: "list",
   activeId: "family",
   familyCount: 0,
-  udaraCount: 0,
+  amandaCount: 0,
   typing: false,
   done: false,
 };
 
 const DONE: HeroAnimState = {
-  phase: "udara",
-  activeId: "udara",
+  phase: "amanda",
+  activeId: "amanda",
   familyCount: FAMILY_THREAD.length,
-  udaraCount: UDARA_THREAD.length,
+  amandaCount: AMANDA_THREAD.length,
   typing: false,
   done: true,
 };
 
-/** List beat — short so family/Udara arrive while the user is looking */
+/** List beat — short so family/Amanda arrive while the user is looking */
 const LIST_MS = 600;
 const FAMILY_STEP_MS = 300;
 const FAMILY_HOLD_MS = 550;
-const UDARA_USER_MS = 320;
-const UDARA_TYPE_MS = 200;
-const UDARA_REPLY_MS = 500;
-const UDARA_GAP_MS = 260;
+const AMANDA_USER_MS = 320;
+const AMANDA_TYPE_MS = 200;
+const AMANDA_REPLY_MS = 500;
+const AMANDA_GAP_MS = 260;
 
 type Keyframe = { at: number; state: HeroAnimState };
 
@@ -55,7 +55,7 @@ function buildKeyframes(): Keyframe[] {
         phase: "family",
         activeId: "family",
         familyCount: 1,
-        udaraCount: 0,
+        amandaCount: 0,
         typing: false,
         done: false,
       },
@@ -71,7 +71,7 @@ function buildKeyframes(): Keyframe[] {
         phase: "family",
         activeId: "family",
         familyCount: i,
-        udaraCount: 0,
+        amandaCount: 0,
         typing: false,
         done: false,
       },
@@ -82,53 +82,53 @@ function buildKeyframes(): Keyframe[] {
   frames.push({
     at: t,
     state: {
-      phase: "udara",
-      activeId: "udara",
+      phase: "amanda",
+      activeId: "amanda",
       familyCount: FAMILY_THREAD.length,
-      udaraCount: 0,
+      amandaCount: 0,
       typing: false,
       done: false,
     },
   });
 
-  for (let i = 0; i < UDARA_THREAD.length; i += 1) {
-    const msg = UDARA_THREAD[i];
+  for (let i = 0; i < AMANDA_THREAD.length; i += 1) {
+    const msg = AMANDA_THREAD[i];
     const n = i + 1;
-    if (msg.from === "udara") {
-      t += UDARA_TYPE_MS;
+    if (msg.from === "amanda") {
+      t += AMANDA_TYPE_MS;
       frames.push({
         at: t,
         state: {
-          phase: "udara",
-          activeId: "udara",
+          phase: "amanda",
+          activeId: "amanda",
           familyCount: FAMILY_THREAD.length,
-          udaraCount: n - 1,
+          amandaCount: n - 1,
           typing: true,
           done: false,
         },
       });
-      t += UDARA_REPLY_MS;
+      t += AMANDA_REPLY_MS;
       frames.push({
         at: t,
         state: {
-          phase: "udara",
-          activeId: "udara",
+          phase: "amanda",
+          activeId: "amanda",
           familyCount: FAMILY_THREAD.length,
-          udaraCount: n,
+          amandaCount: n,
           typing: false,
           done: false,
         },
       });
-      t += UDARA_GAP_MS;
+      t += AMANDA_GAP_MS;
     } else {
-      t += UDARA_USER_MS;
+      t += AMANDA_USER_MS;
       frames.push({
         at: t,
         state: {
-          phase: "udara",
-          activeId: "udara",
+          phase: "amanda",
+          activeId: "amanda",
           familyCount: FAMILY_THREAD.length,
-          udaraCount: n,
+          amandaCount: n,
           typing: false,
           done: false,
         },
@@ -172,7 +172,7 @@ function setState(next: HeroAnimState) {
     prev.phase === next.phase &&
     prev.activeId === next.activeId &&
     prev.familyCount === next.familyCount &&
-    prev.udaraCount === next.udaraCount &&
+    prev.amandaCount === next.amandaCount &&
     prev.typing === next.typing &&
     prev.done === next.done
   ) {
@@ -243,7 +243,7 @@ export function startHeroAnim() {
   startLoop();
 }
 
-/** Force finished Udara (visibility failsafe). */
+/** Force finished Amanda (visibility failsafe). */
 export function forceHeroAnimDone() {
   stopLoop();
   startTs = typeof performance !== "undefined" ? performance.now() - TOTAL_MS : 0;

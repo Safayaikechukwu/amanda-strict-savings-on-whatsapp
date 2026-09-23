@@ -5,16 +5,16 @@ import { copy } from "@/lib/copy";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "The science behind Udara",
+  title: "The science behind Amanda",
   description:
-    "Research that shaped Udara: ADHD financial decision-making, precommitment devices, body doubling, and why systems beat willpower for WhatsApp savings in Nigeria.",
+    "Research that shaped Amanda: ADHD financial decision-making, precommitment devices, body doubling, and why systems beat willpower for WhatsApp savings in Nigeria.",
   alternates: {
     canonical: "/science",
   },
   openGraph: {
-    title: "The science behind Udara",
+    title: "The science behind Amanda",
     description:
-      "Real papers on ADHD money habits, precommitment, and body doubling — and how Udara maps them into a WhatsApp hard lock.",
+      "Real papers on ADHD money habits, precommitment, and body doubling — and how Amanda maps them into a WhatsApp hard lock.",
     url: "/science",
   },
 };
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 const scienceJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "The science behind Udara",
+  name: "The science behind Amanda",
   url: `${siteConfig.url}/science`,
   description:
-    "Research that shaped how Udara locks funds and builds accountability on WhatsApp.",
+    "Research that shaped how Amanda locks funds and builds accountability on WhatsApp.",
   isPartOf: {
     "@type": "WebSite",
     name: siteConfig.name,
@@ -94,7 +94,7 @@ export default function SciencePage() {
                   {pillar.body}
                 </p>
                 <p className="mt-3 text-[15px] font-medium leading-relaxed text-ink/90 sm:text-[16px]">
-                  {pillar.udara}
+                  {pillar.amanda}
                 </p>
                 <div className="mt-4 flex flex-col gap-2">
                   <ResearchLink href={pillar.href}>
@@ -120,7 +120,7 @@ export default function SciencePage() {
               href="/about"
               className="font-medium text-[#4a0508] underline underline-offset-[3px]"
             >
-              About Udara
+              About Amanda
             </Link>{" "}
             or go back to the{" "}
             <Link

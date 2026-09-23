@@ -114,7 +114,7 @@ body {
 }
 
 /*
- * Nav Join Udara — mobile AND desktop.
+ * Nav Join Amanda — mobile AND desktop.
  * Hidden while #hero-cta is on screen; appears after you scroll past it.
  * Class `past-hero-cta` is toggled on <html> by the boot script.
  */
@@ -242,7 +242,7 @@ html.past-hero-cta .nav-join,
   }
 }
 
-/* Book-marker highlight - Udara CTA oxblood */
+/* Book-marker highlight - Amanda CTA oxblood */
 .marker-highlight {
   background-image: linear-gradient(
     104deg,

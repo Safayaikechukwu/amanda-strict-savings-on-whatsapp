@@ -5,7 +5,7 @@ type LogoProps = {
   className?: string;
   /** Light wordmark for dark backgrounds */
   inverted?: boolean;
-  /** Icon only, no "Udara" text */
+  /** Icon only, no "Amanda" text */
   markOnly?: boolean;
 };
 
@@ -25,11 +25,11 @@ export function Logo({
         inverted ? "focus-visible:ring-offset-[#0b0b0c]" : "",
         className,
       ].join(" ")}
-      aria-label="Udara home"
+      aria-label="Amanda home"
     >
       <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-[30%] sm:h-10 sm:w-10">
         <Image
-          src="/udara-mark.png"
+          src="/amanda-mark.png"
           alt=""
           width={40}
           height={40}
@@ -39,7 +39,7 @@ export function Logo({
       </span>
       {markOnly ? null : (
         <span className="text-[19px] font-semibold tracking-[-0.02em] sm:text-[21px]">
-          Udara
+          Amanda
         </span>
       )}
     </Link>

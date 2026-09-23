@@ -37,14 +37,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Udara | Strict savings on WhatsApp",
+    default: "Amanda | Strict savings on WhatsApp",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   appleWebApp: {
     capable: true,
-    title: "Udara",
+    title: "Amanda",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
@@ -54,13 +54,13 @@ export const metadata: Metadata = {
   creator: siteConfig.legalName,
   publisher: siteConfig.legalName,
   keywords: [
-    "Udara",
+    "Amanda",
     "WhatsApp savings",
     "strict savings",
     "AI savings agent",
     "Nigeria fintech",
     "Rubies Microfinance Bank",
-    "Udara Technologies",
+    "Amanda Technologies",
     "money lock",
     "NDPC",
     "financial discipline",
@@ -73,20 +73,20 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Udara | Strict savings on WhatsApp",
+    title: "Amanda | Strict savings on WhatsApp",
     description: siteConfig.description,
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Udara | Strict savings on WhatsApp",
+        alt: "Amanda | Strict savings on WhatsApp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Udara | Strict savings on WhatsApp",
+    title: "Amanda | Strict savings on WhatsApp",
     description: siteConfig.description,
     images: ["/og.png"],
     creator: siteConfig.twitterHandle,
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
       { url: "/favicon.ico?v=6", sizes: "48x48" },
       { url: "/favicon-32.png?v=6", type: "image/png", sizes: "32x32" },
       { url: "/icon-192.png?v=6", type: "image/png", sizes: "192x192" },
-      { url: "/udara-mark.png?v=6", type: "image/png", sizes: "512x512" },
+      { url: "/amanda-mark.png?v=6", type: "image/png", sizes: "512x512" },
     ],
     apple: [
       { url: "/apple-icon.png?v=6", sizes: "180x180", type: "image/png" },
@@ -212,10 +212,10 @@ const bootScript = `
   // Never set data-* on React-managed nodes before hydration: that
   // causes attribute mismatches. Track binding on window instead.
   function bindMenu() {
-    if (window.__udaraMenuBound) return;
+    if (window.__amandaMenuBound) return;
     var details = document.querySelector("details.nav-mobile-menu");
     if (!details) return;
-    window.__udaraMenuBound = true;
+    window.__amandaMenuBound = true;
 
     details.addEventListener("toggle", function () {
       if (details.open) {
@@ -256,10 +256,10 @@ const bootScript = `
   }
 
   function bindDesktopNav() {
-    if (window.__udaraHeaderBound) return;
+    if (window.__amandaHeaderBound) return;
     var header = document.querySelector("header");
     if (!header) return;
-    window.__udaraHeaderBound = true;
+    window.__amandaHeaderBound = true;
 
     header.addEventListener("click", function (event) {
       var link =
@@ -309,7 +309,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col bg-bg font-sans text-ink">
-        <Script id="udara-boot" strategy="beforeInteractive">
+        <Script id="amanda-boot" strategy="beforeInteractive">
           {bootScript}
         </Script>
         <Script

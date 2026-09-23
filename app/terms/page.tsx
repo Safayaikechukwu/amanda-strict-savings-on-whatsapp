@@ -14,7 +14,7 @@ const supportWhatsAppUrl = `https://wa.me/${siteConfig.whatsappNumber}`;
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Udara, the WhatsApp-based strict savings service operated by Udara Global Limited.",
+    "Terms of Service for Amanda, the WhatsApp-based strict savings service operated by Amanda Global Limited.",
   alternates: {
     canonical: "/terms",
   },
@@ -31,7 +31,7 @@ export default function TermsPage() {
             So, what are the terms?
           </h1>
           <p className="mx-auto mt-4 max-w-[34rem] text-pretty text-[16px] leading-[1.5] text-muted sm:mt-6 sm:text-[20px]">
-            The rules for using Udara on WhatsApp, this website, and related
+            The rules for using Amanda on WhatsApp, this website, and related
             services.
           </p>
           <div className="mx-auto mt-6 w-full max-w-[400px] sm:mt-8">
@@ -55,16 +55,16 @@ export default function TermsPage() {
               Entity
             </p>
             <p className="mt-3 text-[clamp(1.5rem,6vw,2.75rem)] font-semibold leading-[1.1] tracking-[-0.03em]">
-              Udara Global Limited
+              Amanda Global Limited
             </p>
             <p className="mt-3 max-w-[560px] text-[15px] leading-[1.55] text-white/75 sm:mt-4 sm:text-[18px]">
-              (&quot;Udara&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).
+              (&quot;Amanda&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).
               Registered office: 25, Herbert Macaulay Way, Yaba, Lagos State,
               Nigeria.
             </p>
             <div className="mt-6 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-3">
               {[
-                ["Product", "Udara · Udara Technologies"],
+                ["Product", "Amanda · Amanda Technologies"],
                 ["Channel", `WhatsApp + ${host}`],
                 ["Law", "Federal Republic of Nigeria"],
               ].map(([label, value]) => (
@@ -88,13 +88,13 @@ export default function TermsPage() {
       <FeatureSection
         id="acceptance"
         title="1. Acceptance of terms."
-        subtitle="Using Udara means you agree to these Terms of Service."
+        subtitle="Using Amanda means you agree to these Terms of Service."
       >
         <MidStage tone="soft">
           <div className="py-6 sm:py-8">
             <PolicyCard>
               <p>
-                By accessing or using the Udara platform, website, WhatsApp
+                By accessing or using the Amanda platform, website, WhatsApp
                 experience, waitlist, or related tools (&quot;the Service&quot;),
                 you agree to be bound by these Terms of Service.
               </p>
@@ -111,28 +111,28 @@ export default function TermsPage() {
       <FeatureSection
         id="service"
         title="2. The service and AI disclaimer."
-        subtitle="Udara is a WhatsApp-based strict savings AI agent, not a perfect oracle."
+        subtitle="Amanda is a WhatsApp-based strict savings AI agent, not a perfect oracle."
       >
         <MidStage tone="warm">
           <div className="py-6 sm:py-8">
             <PolicyCard>
               <p>
-                <strong className="font-semibold text-ink">Scope:</strong> Udara
+                <strong className="font-semibold text-ink">Scope:</strong> Amanda
                 provides Artificial Intelligence (AI) and Natural Language
                 Processing (NLP) features to help people understand spending,
                 apply discipline rules such as transfer locks, and build savings
-                habits on WhatsApp, operated as a Udara Technologies product.
+                habits on WhatsApp, operated as a Amanda Technologies product.
               </p>
               <p>
                 <strong className="font-semibold text-ink">AI nature:</strong> You
-                acknowledge that Udara uses large language models and related AI
+                acknowledge that Amanda uses large language models and related AI
                 systems. While we strive for accuracy, AI can occasionally
                 generate incorrect, incomplete, biased, or &quot;hallucinated&quot;
                 responses.
               </p>
               <p>
                 <strong className="font-semibold text-ink">Your responsibility:</strong>{" "}
-                You remain responsible for decisions you make based on Udara
+                You remain responsible for decisions you make based on Amanda
                 outputs, including savings choices and payment instructions. We
                 are not liable for losses arising solely from reliance on an
                 incorrect AI response.
@@ -145,15 +145,15 @@ export default function TermsPage() {
       <FeatureSection
         id="funds"
         title="3. Banking partner and funds."
-        subtitle="Udara is the discipline layer. Customer funds sit with a licensed bank partner."
+        subtitle="Amanda is the discipline layer. Customer funds sit with a licensed bank partner."
       >
         <MidStage tone="soft">
           <div className="py-6 sm:py-8">
             <PolicyCard>
               <p>
                 <strong className="font-semibold text-ink">Not a bank:</strong>{" "}
-                Udara Global Limited is a technology provider. We are not a
-                deposit-taking bank by ourselves. Customer funds related to Udara
+                Amanda Global Limited is a technology provider. We are not a
+                deposit-taking bank by ourselves. Customer funds related to Amanda
                 savings are held with Rubies Microfinance Bank (and other
                 regulated partners as required).
               </p>
@@ -166,7 +166,7 @@ export default function TermsPage() {
               </p>
               <p>
                 <strong className="font-semibold text-ink">No liability for partner failures:</strong>{" "}
-                To the extent permitted by law, Udara is not liable for payment
+                To the extent permitted by law, Amanda is not liable for payment
                 failures, settlement delays, or disputes that arise solely
                 between you and a banking or payment partner, except where caused
                 by our own wilful misconduct or negligence as determined under
@@ -187,7 +187,7 @@ export default function TermsPage() {
             <PolicyCard>
               <p>
                 <strong className="font-semibold text-ink">Eligibility:</strong> You
-                must be at least 18 years old to use Udara.
+                must be at least 18 years old to use Amanda.
               </p>
               <p>
                 <strong className="font-semibold text-ink">Verification (KYC):</strong>{" "}
@@ -200,7 +200,7 @@ export default function TermsPage() {
                 <strong className="font-semibold text-ink">Account security:</strong>{" "}
                 You are responsible for maintaining the confidentiality of your
                 WhatsApp access, PINs, passcodes, and any credentials used with
-                Udara. Notify us promptly if you suspect unauthorised access, and
+                Amanda. Notify us promptly if you suspect unauthorised access, and
                 use account block tools where available.
               </p>
             </PolicyCard>
@@ -211,12 +211,12 @@ export default function TermsPage() {
       <FeatureSection
         id="acceptable-use"
         title="5. Acceptable use policy."
-        subtitle="Use Udara lawfully. Do not abuse Meta, WhatsApp, or our systems."
+        subtitle="Use Amanda lawfully. Do not abuse Meta, WhatsApp, or our systems."
       >
         <MidStage tone="soft">
           <div className="py-6 sm:py-8">
             <PolicyCard>
-              <p>You agree not to use Udara for:</p>
+              <p>You agree not to use Amanda for:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
                   Any illegal activities, fraud, or prohibited financial activity.
@@ -250,7 +250,7 @@ export default function TermsPage() {
               <p>
                 <strong className="font-semibold text-ink">Ownership:</strong> All
                 software, proprietary AI models, documentation, and brand assets
-                remain the exclusive property of Udara Global Limited (and its
+                remain the exclusive property of Amanda Global Limited (and its
                 licensors).
               </p>
               <p>
@@ -281,7 +281,7 @@ export default function TermsPage() {
                   Privacy Policy
                 </Link>
                 . That policy explains how we collect, use, and protect personal
-                data for Udara.
+                data for Amanda.
               </p>
             </PolicyCard>
           </div>
@@ -297,7 +297,7 @@ export default function TermsPage() {
           <div className="py-6 sm:py-8">
             <PolicyCard>
               <p className="uppercase tracking-[0.02em]">
-                To the maximum extent permitted by Nigerian law, Udara Global
+                To the maximum extent permitted by Nigerian law, Amanda Global
                 Limited shall not be liable for any indirect, incidental, special,
                 or consequential damages. Our total liability arising out of or
                 relating to the Service shall not exceed the total fees (if any)
@@ -320,7 +320,7 @@ export default function TermsPage() {
             <PolicyCard>
               <p>
                 <strong className="font-semibold text-ink">By you:</strong> You may
-                stop using Udara at any time and request account closure through
+                stop using Amanda at any time and request account closure through
                 support channels.
               </p>
               <p>
@@ -366,7 +366,7 @@ export default function TermsPage() {
                   Attn
                 </p>
                 <p className="mt-2 text-[1.25rem] font-semibold tracking-[-0.02em] sm:text-[1.35rem]">
-                  Legal Department, Udara Global Limited
+                  Legal Department, Amanda Global Limited
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-white/75 sm:mt-4">
                   25, Herbert Macaulay Way, Yaba, Lagos State, Nigeria.

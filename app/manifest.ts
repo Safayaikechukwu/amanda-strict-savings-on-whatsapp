@@ -4,8 +4,8 @@ import { siteConfig } from "@/lib/site";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     id: "/",
-    name: "Udara",
-    short_name: "Udara",
+    name: "Amanda",
+    short_name: "Amanda",
     description: siteConfig.description,
     start_url: "/?source=pwa",
     scope: "/",
@@ -46,7 +46,7 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/png",
       },
       {
-        src: "/udara-mark.png?v=6",
+        src: "/amanda-mark.png?v=6",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",

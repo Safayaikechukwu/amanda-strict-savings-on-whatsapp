@@ -13,7 +13,7 @@ const supportWhatsAppUrl = `https://wa.me/${siteConfig.whatsappNumber}`;
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Udara Global Limited collects, uses, and protects personal data for the Udara WhatsApp savings service. Covers NDPA 2023, GDPR principles, and Meta Platform Terms.",
+    "How Amanda Global Limited collects, uses, and protects personal data for the Amanda WhatsApp savings service. Covers NDPA 2023, GDPR principles, and Meta Platform Terms.",
   alternates: {
     canonical: "/privacy",
   },
@@ -59,14 +59,14 @@ export default function PrivacyPage() {
               NDPC/DCP/11710
             </p>
             <p className="mt-3 max-w-[560px] text-[15px] leading-[1.55] text-white/75 sm:mt-4 sm:text-[18px]">
-              Udara Global Limited is a registered data controller/processor of
+              Amanda Global Limited is a registered data controller/processor of
               major importance with the Nigeria Data Protection Commission.
             </p>
             <div className="mt-6 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-3">
               {[
-                ["Entity", "Udara Global Limited"],
-                ["Product", "Udara · Udara Technologies"],
-                ["Channel", "WhatsApp + useudara.com"],
+                ["Entity", "Amanda Global Limited"],
+                ["Product", "Amanda · Amanda Technologies"],
+                ["Channel", "WhatsApp + useamanda.com"],
               ].map(([label, value]) => (
                 <div
                   key={label}
@@ -88,21 +88,21 @@ export default function PrivacyPage() {
       <FeatureSection
         id="introduction"
         title="Who this covers."
-        subtitle="Merchants of one: anyone using Udara on WhatsApp, on the site, or on our waitlist."
+        subtitle="Merchants of one: anyone using Amanda on WhatsApp, on the site, or on our waitlist."
       >
         <MidStage tone="soft">
           <div className="py-6 sm:py-8">
             <PolicyCard>
               <p>
-                This policy applies to people who use Udara through WhatsApp,
+                This policy applies to people who use Amanda through WhatsApp,
                 visit {host}, join our waitlist or newsletter, use account
-                block/unblock flows, or otherwise interact with Udara websites,
+                block/unblock flows, or otherwise interact with Amanda websites,
                 applications, and connected channels (including WhatsApp where
                 integrated).
               </p>
               <p>
-                Udara Global Limited (&quot;Udara&quot;, &quot;we&quot;,
-                &quot;us&quot;, or &quot;our&quot;) operates Udara as a Udara
+                Amanda Global Limited (&quot;Amanda&quot;, &quot;we&quot;,
+                &quot;us&quot;, or &quot;our&quot;) operates Amanda as a Amanda
                 Technologies product. By using our services, you acknowledge the
                 practices described herein.
               </p>
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
       <FeatureSection
         id="roles"
         title="Roles & partners."
-        subtitle="We are the controller for Udara account data. Rubies holds customer funds. Meta powers WhatsApp delivery."
+        subtitle="We are the controller for Amanda account data. Rubies holds customer funds. Meta powers WhatsApp delivery."
       >
         <MidStage tone="warm">
           <div className="py-6 sm:py-8">
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                 <strong className="font-semibold text-ink">
                   As a data controller:
                 </strong>{" "}
-                Udara is the controller for personal data we collect to operate
+                Amanda is the controller for personal data we collect to operate
                 the product: WhatsApp identifiers, preferences you share,
                 waitlist emails, support messages, and website analytics.
               </p>
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
                 <strong className="font-semibold text-ink">
                   Banking partner:
                 </strong>{" "}
-                Customer funds related to Udara savings are held with Rubies
+                Customer funds related to Amanda savings are held with Rubies
                 Microfinance Bank. Rubies remains responsible for banking,
                 settlement, and regulated financial records. We exchange
                 information with Rubies only as needed to deliver the service
@@ -206,7 +206,7 @@ export default function PrivacyPage() {
                 <strong className="font-semibold text-ink">
                   Conversation content:
                 </strong>{" "}
-                temporary processing of text so Udara can understand intent,
+                temporary processing of text so Amanda can understand intent,
                 answer spending questions, and apply discipline features such as
                 transfer locks.
               </p>
@@ -238,7 +238,7 @@ export default function PrivacyPage() {
                   <strong className="font-semibold text-ink">
                     Contractual necessity:
                   </strong>{" "}
-                  to provide Udara savings and WhatsApp agent services.
+                  to provide Amanda savings and WhatsApp agent services.
                 </li>
                 <li>
                   <strong className="font-semibold text-ink">
@@ -274,7 +274,7 @@ export default function PrivacyPage() {
           <div className="py-6 sm:py-8">
             <PolicyCard>
               <p>
-                Udara uses proprietary and third-party AI models to power
+                Amanda uses proprietary and third-party AI models to power
                 WhatsApp conversations, spending insights, and savings
                 discipline features.
               </p>

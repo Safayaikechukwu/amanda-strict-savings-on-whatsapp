@@ -43,7 +43,7 @@ export function Faq() {
             {copy.faq.items.map((item) => (
               <details
                 key={item.question}
-                name="udara-faq"
+                name="amanda-faq"
                 className="group border-b border-black/[0.08] py-5 open:pb-6 last:border-b-0 sm:py-6"
                 // Don't set `open` in React — browsers with exclusive
                 // accordion (`name`) mutate it before hydration and crash client JS.

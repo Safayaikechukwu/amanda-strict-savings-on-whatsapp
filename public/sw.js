@@ -1,5 +1,5 @@
-/* Udara — minimal service worker for installability / Add to Home Screen */
-const CACHE = "udara-shell-v1";
+/* Amanda — minimal service worker for installability / Add to Home Screen */
+const CACHE = "amanda-shell-v1";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

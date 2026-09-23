@@ -20,7 +20,7 @@ export function RotatingHighlight({
 }: RotatingHighlightProps) {
   const count = Math.max(words.length, 1);
   const cycleSeconds = count * holdSeconds;
-  const animName = `udara-rotating-word-${count}`;
+  const animName = `amanda-rotating-word-${count}`;
 
   const slot = 100 / count;
   const fade = Math.min(1.5, slot * 0.08);

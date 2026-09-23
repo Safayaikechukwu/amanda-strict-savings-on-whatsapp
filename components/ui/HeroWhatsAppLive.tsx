@@ -6,9 +6,9 @@ import { PhoneShell } from "@/components/ui/FeatureSceneIllustrations";
 import {
   CHATS,
   FAMILY_THREAD,
-  UDARA_THREAD,
+  AMANDA_THREAD,
   familyChat,
-  udaraChat,
+  amandaChat,
   type Bubble,
   type ChatRow,
 } from "@/components/ui/heroWhatsAppData";
@@ -607,20 +607,20 @@ function Thread({
 }
 
 export function HeroWhatsAppLive({ anim }: { anim: HeroAnimState }) {
-  const { phase, activeId, familyCount, udaraCount, typing, done } = anim;
-  const viewPhase = done || phase === "udara" ? "udara" : phase;
+  const { phase, activeId, familyCount, amandaCount, typing, done } = anim;
+  const viewPhase = done || phase === "amanda" ? "amanda" : phase;
 
   return (
     <BrowserFrame url="web.whatsapp.com">
       <div className="grid h-[640px] md:h-[720px] md:grid-cols-[300px_1fr] lg:h-[780px]">
         <aside className="h-full border-r border-black/[0.08]">
-          <Sidebar activeId={done ? "udara" : activeId} />
+          <Sidebar activeId={done ? "amanda" : activeId} />
         </aside>
         <div className="h-full min-h-0">
-          {viewPhase === "udara" ? (
+          {viewPhase === "amanda" ? (
             <Thread
-              chat={udaraChat}
-              bubbles={UDARA_THREAD.slice(0, Math.max(udaraCount, 0))}
+              chat={amandaChat}
+              bubbles={AMANDA_THREAD.slice(0, Math.max(amandaCount, 0))}
               typing={done ? false : typing}
             />
           ) : viewPhase === "list" ? (
@@ -649,8 +649,8 @@ export function HeroPhoneLive({
   anim: HeroAnimState;
   scale?: number;
 }) {
-  const { phase, activeId, familyCount, udaraCount, typing, done } = anim;
-  const viewPhase = done || phase === "udara" ? "udara" : phase;
+  const { phase, activeId, familyCount, amandaCount, typing, done } = anim;
+  const viewPhase = done || phase === "amanda" ? "amanda" : phase;
 
   return (
     <div className="mx-auto w-full max-w-[340px]">
@@ -670,8 +670,8 @@ export function HeroPhoneLive({
             />
           ) : (
             <Thread
-              chat={udaraChat}
-              bubbles={UDARA_THREAD.slice(0, Math.max(udaraCount, 0))}
+              chat={amandaChat}
+              bubbles={AMANDA_THREAD.slice(0, Math.max(amandaCount, 0))}
               typing={done ? false : typing}
               dark
               showBack

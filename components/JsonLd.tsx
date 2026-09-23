@@ -8,9 +8,9 @@ export function JsonLd() {
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalEntity,
-    alternateName: [siteConfig.legalName, "Udara WhatsApp savings"],
+    alternateName: [siteConfig.legalName, "Amanda WhatsApp savings"],
     url: siteConfig.url,
-    logo: `${siteConfig.url}/udara-mark.png`,
+    logo: `${siteConfig.url}/amanda-mark.png`,
     image: `${siteConfig.url}/og.png`,
     description: siteConfig.description,
     foundingLocation: {
@@ -58,7 +58,7 @@ export function JsonLd() {
     brand: {
       "@type": "Brand",
       name: siteConfig.name,
-      logo: `${siteConfig.url}/udara-mark.png`,
+      logo: `${siteConfig.url}/amanda-mark.png`,
     },
     parentOrganization: {
       "@type": "Organization",
@@ -87,7 +87,7 @@ export function JsonLd() {
       "@type": "Offer",
       price: "0",
       priceCurrency: "NGN",
-      description: "Join Udara on WhatsApp",
+      description: "Join Amanda on WhatsApp",
       url: siteConfig.url,
     },
     provider: {
@@ -127,16 +127,16 @@ export function JsonLd() {
   const howTo = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to join Udara",
+    name: "How to join Amanda",
     description:
-      "Join Udara’s WhatsApp strict savings agent, set a savings goal, and move money in.",
+      "Join Amanda’s WhatsApp strict savings agent, set a savings goal, and move money in.",
     totalTime: "PT10M",
     step: [
       {
         "@type": "HowToStep",
         position: 1,
-        name: "Open Join Udara",
-        text: "Tap Join Udara on https://www.useudara.com to start a WhatsApp chat with Udara.",
+        name: "Open Join Amanda",
+        text: "Tap Join Amanda on https://www.useamanda.com to start a WhatsApp chat with Amanda.",
         url: siteConfig.url,
       },
       {
@@ -149,13 +149,13 @@ export function JsonLd() {
         "@type": "HowToStep",
         position: 3,
         name: "Set a savings goal",
-        text: "Choose the savings goal Udara will help you stay accountable to.",
+        text: "Choose the savings goal Amanda will help you stay accountable to.",
       },
       {
         "@type": "HowToStep",
         position: 4,
         name: "Move money in",
-        text: "Move money in through the Rubies Microfinance Bank-backed flow. Udara then applies the 7PM hard lock and accountability.",
+        text: "Move money in through the Rubies Microfinance Bank-backed flow. Amanda then applies the 7PM hard lock and accountability.",
       },
     ],
   };

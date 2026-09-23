@@ -5,15 +5,15 @@ import { siteConfig } from "@/lib/site";
 export function SiteFacts() {
   return (
     <aside
-      id="about-udara"
+      id="about-amanda"
       className="w-full border-t border-white/10 pt-8"
-      aria-label="About Udara"
+      aria-label="About Amanda"
     >
       <h2 className="text-[12px] font-semibold tracking-[-0.01em] text-white/80">
         About {siteConfig.name}
       </h2>
       <p className="mt-2 max-w-[70ch] text-[11px] leading-relaxed text-white/45">
-        {siteConfig.description} Udara is built for people who need systems, not
+        {siteConfig.description} Amanda is built for people who need systems, not
         more willpower: hard locks, WhatsApp-native habits, and banking-grade
         security.{" "}
         <Link
