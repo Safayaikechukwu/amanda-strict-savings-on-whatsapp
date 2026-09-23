@@ -6,16 +6,18 @@ import { copy } from "@/lib/copy";
 import { siteConfig, supportWhatsAppUrl, whatsappJoinUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Amanda",
+  title: {
+    absolute: "About Amanda | Strict savings AI on WhatsApp",
+  },
   description:
-    "Amanda is a WhatsApp-based strict savings AI agent by Amanda Technologies in Nigeria. Funds are held with Rubies Microfinance Bank. Hard-locks transfers from 7PM. NDPC/DCP/11710.",
+    "Amanda is a strict savings AI agent on WhatsApp for Nigeria. It explains spending, hard-locks transfers from 7PM, and helps you keep what you meant to save.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Amanda | Strict savings on WhatsApp",
+    title: "About Amanda | Strict savings AI on WhatsApp",
     description:
-      "What Amanda is, who built it, how funds are held, and how to join on WhatsApp.",
+      "Amanda is a strict savings AI agent on WhatsApp for Nigeria.",
     url: "/about",
   },
 };
@@ -48,7 +50,7 @@ export default function AboutPage() {
             About Amanda
           </p>
           <h1 className="mt-2 text-balance text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.04em] text-ink sm:text-[3rem]">
-            Amanda is strict savings on WhatsApp.
+            Amanda is a strict savings AI on WhatsApp.
           </h1>
           <p className="mt-5 text-pretty text-[17px] leading-relaxed text-muted sm:text-[19px]">
             {siteConfig.description}
@@ -91,7 +93,7 @@ export default function AboutPage() {
                 </dd>
               </div>
               <div>
-                <dt className="font-semibold text-ink">Banking partner</dt>
+                <dt className="font-semibold text-ink">Bank</dt>
                 <dd className="mt-1 text-muted">{siteConfig.bankingPartner}</dd>
               </div>
               <div>

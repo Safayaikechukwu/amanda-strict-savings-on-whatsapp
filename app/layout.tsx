@@ -37,7 +37,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Amanda | Strict savings on WhatsApp",
+    default: "Amanda | Strict savings AI on WhatsApp",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -55,15 +55,14 @@ export const metadata: Metadata = {
   publisher: siteConfig.legalName,
   keywords: [
     "Amanda",
-    "WhatsApp savings",
     "strict savings",
-    "AI savings agent",
-    "Nigeria fintech",
+    "WhatsApp savings AI",
+    "savings agent Nigeria",
+    "7PM money lock",
     "Rubies Microfinance Bank",
     "Amanda Technologies",
-    "money lock",
-    "NDPC",
     "financial discipline",
+    "NDPC",
   ],
   alternates: {
     canonical: "/",
@@ -73,20 +72,20 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Amanda | Strict savings on WhatsApp",
+    title: "Amanda | Strict savings AI on WhatsApp",
     description: siteConfig.description,
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Amanda | Strict savings on WhatsApp",
+        alt: "Amanda | Strict savings AI on WhatsApp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amanda | Strict savings on WhatsApp",
+    title: "Amanda | Strict savings AI on WhatsApp",
     description: siteConfig.description,
     images: ["/og.png"],
     creator: siteConfig.twitterHandle,
@@ -104,15 +103,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=6", sizes: "48x48" },
-      { url: "/favicon-32.png?v=6", type: "image/png", sizes: "32x32" },
-      { url: "/icon-192.png?v=6", type: "image/png", sizes: "192x192" },
-      { url: "/amanda-mark.png?v=6", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=8", sizes: "48x48" },
+      { url: "/favicon-32.png?v=8", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png?v=8", type: "image/png", sizes: "192x192" },
+      { url: "/amanda-mark.png?v=8", type: "image/png", sizes: "512x512" },
     ],
     apple: [
-      { url: "/apple-icon.png?v=6", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=8", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=6",
+    shortcut: "/favicon.ico?v=8",
   },
   other: {
     "mobile-web-app-capable": "yes",
