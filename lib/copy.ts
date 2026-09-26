@@ -322,7 +322,7 @@ export const copy = {
       { label: "LinkedIn", href: "https://www.linkedin.com/company/amanda-tech/", icon: "linkedin" },
     ],
     poweredBy: "Powered by Rubies Microfinance Bank.",
-    copyright: "© 2026 Amanda. A Amanda Technologies product.",
+    copyright: "© 2026 Amanda. An Amanda Technologies product.",
   },
 
   whatsappMock: {
