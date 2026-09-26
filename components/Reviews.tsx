@@ -31,7 +31,7 @@ const cards = [
     tagBg: "#f6eaea",
     tagDot: "#4a0508",
     quote:
-      "As a freelancer the money comes in big, then it disappears for weeks. Amanda helps me treat a ₦2 million job like it has to last — I budget around ₦1 million and break it into monthly, weekly, and daily so I don't burn the whole thing at once.",
+      "As a freelancer the money comes in big, then it disappears for weeks. Amanda helps me treat a ₦2 million job like it has to last. I budget around ₦1 million and break it into monthly, weekly, and daily so I don't burn the whole thing at once.",
     name: "Ngazi Promise",
     role: "Freelancer, Lagos",
     overlay: "bg-[#4a0508]/75",
