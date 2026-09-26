@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { copy } from "@/lib/copy";
 
 export type AccountMode = "block" | "unblock";
 
@@ -108,18 +109,19 @@ export function AccountActionForm({ mode }: AccountActionFormProps) {
           >
             Block Account
           </Link>
-          <Link
-            href="/account/unblock"
+          <a
+            href={copy.instantBlock.secondaryHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className={[
               "rounded-[10px] px-3 py-2.5 text-center text-[14px] font-semibold transition-colors",
               mode === "unblock"
                 ? "bg-white text-ink shadow-[0_1px_2px_rgba(0,0,0,0.06)]"
                 : "text-muted hover:text-ink",
             ].join(" ")}
-            aria-current={mode === "unblock" ? "page" : undefined}
           >
             Unblock Account
-          </Link>
+          </a>
         </div>
       </div>
 

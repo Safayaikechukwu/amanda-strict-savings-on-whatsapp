@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { AccountActionForm } from "@/components/account/AccountActionForm";
-import { AccountShell } from "@/components/account/AccountShell";
+import { redirect } from "next/navigation";
+import { copy } from "@/lib/copy";
 
 export const metadata: Metadata = {
   title: "Unblock Account | Amanda",
-  description: "Restore access to your Amanda account after verifying your details.",
+  description:
+    "Message Amanda on WhatsApp to unblock your account and restore access.",
 };
 
 export default function UnblockAccountPage() {
-  return (
-    <AccountShell>
-      <AccountActionForm mode="unblock" />
-    </AccountShell>
-  );
+  redirect(copy.instantBlock.secondaryHref);
 }

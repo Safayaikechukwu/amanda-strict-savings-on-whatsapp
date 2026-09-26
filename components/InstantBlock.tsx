@@ -76,12 +76,14 @@ export function InstantBlock() {
             {copy.instantBlock.body}
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:justify-start">
-            <Link
-              href="/account/unblock"
+            <a
+              href={copy.instantBlock.secondaryHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-[8px] bg-white px-4 py-3 text-[14px] font-normal text-cta transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta focus-visible:ring-offset-2 focus-visible:ring-offset-[#ecd4d6]"
             >
               {copy.instantBlock.secondary}
-            </Link>
+            </a>
             <Link
               href="/account/block"
               className="inline-flex items-center justify-center rounded-[8px] bg-cta px-4 py-3 text-[14px] font-normal text-white transition-colors hover:bg-cta-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta focus-visible:ring-offset-2 focus-visible:ring-offset-[#ecd4d6]"

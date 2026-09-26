@@ -1,4 +1,4 @@
-import { whatsappJoinUrl } from "@/lib/site";
+import { whatsappIntentUrl, whatsappJoinUrl } from "@/lib/site";
 
 export const copy = {
   brand: "Amanda",
@@ -256,6 +256,9 @@ export const copy = {
     headline: "Lost Your Phone? Secure Your Accounts Instantly",
     body: "If your device is stolen or compromised, don't worry you can freeze your Amanda account right from any WhatsApp device. We'll pause all payment activity and guide you through recovery.",
     secondary: "Unblock Account",
+    secondaryHref: whatsappIntentUrl(
+      "Hi, I pressed Unblock Account. I want to unblock my Amanda account.",
+    ),
     primary: "Block Account Now",
   },
 

@@ -37,3 +37,8 @@ export const siteConfig = {
 export const whatsappJoinUrl = `https://wa.me/${siteConfig.whatsappJoinNumber}?text=${encodeURIComponent(siteConfig.whatsappJoinMessage)}`;
 
 export const supportWhatsAppUrl = `https://wa.me/${siteConfig.whatsappNumber}`;
+
+/** Opens WhatsApp to the support line with a pre-filled message. */
+export function whatsappIntentUrl(message: string) {
+  return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
