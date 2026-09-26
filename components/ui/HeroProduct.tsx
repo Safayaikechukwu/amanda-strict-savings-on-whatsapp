@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useSyncExternalStore } from "react";
-import {
-  HeroPhoneLive,
-  HeroWhatsAppLive,
-} from "@/components/ui/HeroWhatsAppLive";
+import { useEffect, useRef } from "react";
+import { HeroAppLive } from "@/components/ui/HeroAppLive";
 import {
   forceHeroAnimDoneIfStuck,
   resetHeroAnim,
@@ -19,61 +16,26 @@ const PHONE_VISIBLE = 0.78; // top portion — hard-crop the rest
 
 const cropH = Math.round(PHONE_DESIGN_H * PHONE_SCALE * PHONE_VISIBLE);
 
-const DESKTOP_MQ = "(min-width: 768px)";
-
-function subscribeDesktop(callback: () => void) {
-  const mq = window.matchMedia(DESKTOP_MQ);
-  mq.addEventListener("change", callback);
-  return () => mq.removeEventListener("change", callback);
-}
-
-function getDesktopSnapshot() {
-  return window.matchMedia(DESKTOP_MQ).matches;
-}
-
-/** SSR / first paint: phone (mobile-first). */
-function getDesktopServerSnapshot() {
-  return false;
-}
-
-function useIsDesktop() {
-  return useSyncExternalStore(
-    subscribeDesktop,
-    getDesktopSnapshot,
-    getDesktopServerSnapshot,
-  );
-}
-
 /**
- * Single visible shell + visibility-gated hero clock.
+ * Single visible Amanda in-app chat phone + visibility-gated hero clock.
  */
 export function HeroProduct() {
   const anim = useHeroAnim();
-  const isDesktop = useIsDesktop();
   const rootRef = useRef<HTMLDivElement>(null);
   const startedRef = useRef(false);
   const seqRef = useRef<string[]>([]);
 
-  const viewPhase = anim.done || anim.phase === "amanda" ? "amanda" : anim.phase;
-
-  // Compact transition log for cold-load QA (data-hero-seq)
   const seqKey = anim.done
     ? "done"
-    : anim.phase === "list"
-      ? "list"
-      : anim.phase === "family"
-        ? `family${anim.familyCount}`
-        : `amanda${anim.amandaCount}${anim.typing ? "t" : ""}`;
+    : `chat${anim.amandaCount}${anim.typing ? "t" : ""}`;
   if (seqRef.current[seqRef.current.length - 1] !== seqKey) {
     seqRef.current = [...seqRef.current, seqKey];
   }
 
-  // Start clock the first time the mock is meaningfully on screen
   useEffect(() => {
     const node = rootRef.current;
     if (!node) return;
 
-    // Fresh mount — drop any leftover module state from HMR / prior visits
     resetHeroAnim();
     startedRef.current = false;
     seqRef.current = [];
@@ -93,7 +55,6 @@ export function HeroProduct() {
       return ratio >= 0.3;
     };
 
-    // Sync check — IO alone can miss "already visible" on first paint
     if (visiblyOnScreen()) {
       arm();
       return;
@@ -112,7 +73,6 @@ export function HeroProduct() {
     );
 
     observer.observe(node);
-    // Re-check after layout settles (fonts / images)
     const retry = window.setTimeout(() => {
       if (visiblyOnScreen()) arm();
     }, 120);
@@ -123,41 +83,39 @@ export function HeroProduct() {
     };
   }, []);
 
-  // Visible but truly frozen on empty list → finished Amanda (never empty/black)
   useEffect(() => {
     if (!startedRef.current) return;
     if (anim.done) return;
-    if (anim.phase !== "list" || anim.familyCount > 0) return;
+    if (anim.amandaCount > 0) return;
 
     const id = window.setTimeout(() => {
       forceHeroAnimDoneIfStuck();
     }, 2500);
 
     return () => window.clearTimeout(id);
-  }, [anim.done, anim.phase, anim.familyCount]);
+  }, [anim.done, anim.amandaCount]);
 
   return (
     <div
       ref={rootRef}
-      data-hero-phase={viewPhase}
+      data-hero-phase="chat"
       data-hero-amanda={anim.amandaCount}
-      data-hero-fam={anim.familyCount}
       {...(process.env.NODE_ENV === "development"
         ? { "data-hero-seq": seqRef.current.join(">") }
         : {})}
+      className="flex justify-center px-2"
     >
-      {isDesktop ? (
-        <HeroWhatsAppLive anim={anim} />
-      ) : (
-        <div className="flex justify-center px-2">
-          <div
-            className="mx-auto w-full max-w-[340px] overflow-hidden"
-            style={{ height: cropH }}
-          >
-            <HeroPhoneLive anim={anim} scale={PHONE_SCALE} />
-          </div>
+      {/* Soft shadow outside crop — overflow-hidden was clipping PhoneShell drop-shadow */}
+      <div
+        className="mx-auto w-full max-w-[340px] md:max-w-[360px]"
+        style={{
+          filter: "drop-shadow(0 14px 24px rgba(0,0,0,0.12))",
+        }}
+      >
+        <div className="overflow-hidden" style={{ height: cropH }}>
+          <HeroAppLive anim={anim} scale={PHONE_SCALE} />
         </div>
-      )}
+      </div>
     </div>
   );
 }

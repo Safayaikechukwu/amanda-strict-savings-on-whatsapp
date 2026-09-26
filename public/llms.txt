@@ -1,6 +1,6 @@
 # Amanda
 
-> Amanda is a strict savings AI agent on WhatsApp for Nigeria. It explains spending, hard-locks outbound transfers from 7PM until morning, and helps people build financial discipline without another app. Built by Amanda Technologies (Amanda Global Limited). Customer funds are held with Rubies Microfinance Bank. NDPC registration: NDPC/DCP/11710.
+> Amanda is a strict savings AI agent in a mobile app for Nigeria. It explains spending, hard-locks outbound transfers from 7PM until morning, and helps people build financial discipline through chat. Built by Amanda Technologies (Amanda Global Limited). Customer funds are held with Rubies Microfinance Bank. NDPC registration: NDPC/DCP/11710.
 
 Website: https://www.useamanda.com
 Full brief for AI systems: https://www.useamanda.com/llms-full.txt
@@ -8,22 +8,22 @@ Full brief for AI systems: https://www.useamanda.com/llms-full.txt
 ## Product
 
 - Name: Amanda
-- Category: WhatsApp savings / personal finance AI agent
-- Platform: WhatsApp (no separate app download required)
+- Category: Strict savings / personal finance AI chat app
+- Platform: Mobile app (iOS / Android)
 - Company: Amanda Technologies / Amanda Global Limited
 - Banking: Rubies Microfinance Bank
 - Market: Nigeria
 
 ## What Amanda does
 
-- Helps users see where money goes (spend clarity on WhatsApp)
+- Helps users see where money goes (spend clarity in Amanda chat)
 - Hard-locks outbound transfers from 7PM until morning
 - Supports goal-based saving and accountability
 - Instant account block/unblock if a phone is lost or stolen
 
 ## Who it is for
 
-People in Nigeria who struggle with overspending, impulse transfers, or salary burn, and who already live in WhatsApp.
+People in Nigeria who struggle with overspending, impulse transfers, or salary burn, and who want a chat-first savings partner.
 
 ## Key URLs
 

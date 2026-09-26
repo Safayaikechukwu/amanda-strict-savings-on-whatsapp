@@ -7,14 +7,14 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "The science behind Amanda",
   description:
-    "Research that shaped Amanda: ADHD financial decision-making, precommitment devices, body doubling, and why systems beat willpower for WhatsApp savings in Nigeria.",
+    "Research that shaped Amanda: ADHD financial decision-making, precommitment devices, body doubling, and why systems beat willpower for strict savings in Nigeria.",
   alternates: {
     canonical: "/science",
   },
   openGraph: {
     title: "The science behind Amanda",
     description:
-      "Real papers on ADHD money habits, precommitment, and body doubling — and how Amanda maps them into a WhatsApp hard lock.",
+      "Real papers on ADHD money habits, precommitment, and body doubling — and how Amanda maps them into a hard lock in chat.",
     url: "/science",
   },
 };
@@ -25,7 +25,7 @@ const scienceJsonLd = {
   name: "The science behind Amanda",
   url: `${siteConfig.url}/science`,
   description:
-    "Research that shaped how Amanda locks funds and builds accountability on WhatsApp.",
+    "Research that shaped how Amanda locks funds and builds accountability in the app.",
   isPartOf: {
     "@type": "WebSite",
     name: siteConfig.name,

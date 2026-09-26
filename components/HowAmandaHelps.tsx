@@ -19,7 +19,7 @@ const fallbackScenes = [
 
 function PhoneCrop({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative mt-auto -mx-5 h-[360px] overflow-hidden sm:-mx-8 sm:h-[380px] md:h-[420px] lg:-mx-9 lg:h-[480px]">
+    <div className="relative mt-auto -mx-5 h-[400px] overflow-hidden sm:-mx-8 sm:h-[420px] md:h-[460px] lg:-mx-9 lg:h-[520px]">
       {/* Phone is designed at real iPhone width, then uniformly scaled in PhoneShell */}
       <div className="absolute inset-x-0 top-0 flex justify-center pt-2 md:pt-4 lg:pt-5">
         {children}
@@ -69,7 +69,7 @@ export function HowAmandaHelps() {
       <div className="mt-8 grid gap-3 sm:mt-10 sm:gap-4 md:grid-cols-2">
         {copy.howAmandaHelps.cards.map((card, index) => (
           <Reveal key={card.title} delay={index * 70}>
-            <article className="group relative flex h-full min-h-[480px] flex-col overflow-hidden rounded-[16px] bg-[#f1f1ef] px-5 pb-0 pt-6 sm:min-h-[520px] sm:rounded-[20px] sm:px-8 sm:pt-9 lg:min-h-[580px] lg:px-9 lg:pt-10">
+            <article className="group relative flex h-full min-h-[520px] flex-col overflow-hidden rounded-[16px] bg-[#f1f1ef] px-5 pb-0 pt-6 sm:min-h-[560px] sm:rounded-[20px] sm:px-8 sm:pt-9 lg:min-h-[620px] lg:px-9 lg:pt-10">
               <div className="min-h-[6.75rem] sm:min-h-[7.75rem]">
                 <p className="text-[13px] font-medium text-[#6b6b6b] sm:text-[14px]">
                   {card.label}

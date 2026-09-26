@@ -7,17 +7,17 @@ import { siteConfig, supportWhatsAppUrl, whatsappJoinUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Amanda | Strict savings AI on WhatsApp",
+    absolute: "About Amanda | Strict savings AI in the app",
   },
   description:
-    "Amanda is a strict savings AI agent on WhatsApp for Nigeria. It explains spending, hard-locks transfers from 7PM, and helps you keep what you meant to save.",
+    "Amanda is a strict savings AI agent in a mobile app for Nigeria. It explains spending, hard-locks transfers from 7PM, and helps you keep what you meant to save.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Amanda | Strict savings AI on WhatsApp",
+    title: "About Amanda | Strict savings AI in the app",
     description:
-      "Amanda is a strict savings AI agent on WhatsApp for Nigeria.",
+      "Amanda is a strict savings AI agent in a mobile app for Nigeria.",
     url: "/about",
   },
 };
@@ -50,7 +50,7 @@ export default function AboutPage() {
             About Amanda
           </p>
           <h1 className="mt-2 text-balance text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.04em] text-ink sm:text-[3rem]">
-            Amanda is a strict savings AI on WhatsApp.
+            Amanda is a strict savings AI in the app.
           </h1>
           <p className="mt-5 text-pretty text-[17px] leading-relaxed text-muted sm:text-[19px]">
             {siteConfig.description}

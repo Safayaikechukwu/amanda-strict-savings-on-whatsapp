@@ -4,6 +4,27 @@ function TrustIcon({ type }: { type: string }) {
   const common = "h-[15px] w-[15px] shrink-0 text-[#9b9a97]";
 
   switch (type) {
+    case "phone":
+      return (
+        <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden="true">
+          <rect
+            x="7"
+            y="3"
+            width="10"
+            height="18"
+            rx="2.2"
+            stroke="currentColor"
+            strokeWidth="1.6"
+          />
+          <path
+            d="M10 5.5h4"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+          <circle cx="12" cy="17.5" r="1" fill="currentColor" />
+        </svg>
+      );
     case "whatsapp":
       return (
         <svg viewBox="0 0 24 24" className={common} fill="none" aria-hidden="true">

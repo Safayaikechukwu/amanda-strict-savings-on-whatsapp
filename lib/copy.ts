@@ -2,7 +2,7 @@ import { whatsappIntentUrl, whatsappJoinUrl } from "@/lib/site";
 
 export const copy = {
   brand: "Amanda",
-  tagline: "Your strict savings partner, on WhatsApp.",
+  tagline: "Your strict savings partner, in the app.",
 
   hero: {
     line1Prefix: "End",
@@ -63,7 +63,7 @@ export const copy = {
   },
 
   trust: [
-    { icon: "whatsapp", text: "Lives on WhatsApp. No new app" },
+    { icon: "phone", text: "Lives in the Amanda app" },
     { icon: "lock", text: "Hard lock from 7PM to morning" },
     { icon: "bank", text: "Powered by Rubies Microfinance Bank" },
     { icon: "naira", text: "Built for Nigerian money habits" },
@@ -91,7 +91,7 @@ export const copy = {
     lead: "Financial discipline doesn't come from willpower. It comes from systems.",
     body: "You've tried budgeting apps, Excel trackers, and savings apps. But after seven days, you forget to open the tracker. Before you know it, you've spent more than you can even remember.",
     contrast:
-      "Amanda is the opposite. It lives on WhatsApp, locks funds, and holds you accountable so you can reach your goals.",
+      "Amanda is the opposite. It lives in your phone as a chat, locks funds, and holds you accountable so you can reach your goals.",
     closer:
       "Saving isn't something you remember to do. It's something the system helps you do.",
   },
@@ -101,14 +101,14 @@ export const copy = {
     eyebrow: "The science behind Amanda",
     headline: "ADHD brains don’t fail at money. They fail at remembering to protect it.",
     support:
-      "Amanda is built around what research already shows: impulse, delay aversion, and weak follow-through beat willpower — so the system has to sit where your habits already live.",
+      "Amanda is built around what research already shows: impulse, delay aversion, and weak follow-through beat willpower — so the system has to sit in a chat you actually open.",
     pillars: [
       {
         label: "01",
         title: "Impulse isn’t a character flaw",
         body: "Adults with ADHD are more likely to buy on impulse, struggle to save, and make weaker “future-facing” money decisions — even when they care about money. That’s what standardized financial decision-making studies keep finding.",
         amanda:
-          "Amanda surfaces spends in plain language on WhatsApp, so “I thought I had money” stops hiding in your balance.",
+          "Amanda surfaces spends in plain language in the app chat, so “I thought I had money” stops hiding in your balance.",
         linkLabel: "Bangma et al., Neuropsychology",
         href: "https://doi.org/10.1037/neu0000571",
         secondaryLinkLabel: "PLOS ONE community sample",
@@ -131,7 +131,7 @@ export const copy = {
         title: "Presence beats lonely willpower",
         body: "Body doubling — doing hard tasks with another presence nearby — is widely used in ADHD communities. Early accessibility research is starting to study it for real: safe, promising for some ADHD adults, still early as hard science.",
         amanda:
-          "Amanda acts like a money body double on WhatsApp: always there for the night window, without a new app to remember.",
+          "Amanda acts like a money body double in chat: always there for the night window, in the same place you check your money.",
         linkLabel: "ACM ASSETS body-doubling EEG study",
         href: "https://dl.acm.org/doi/10.1145/3663547.3759743",
         secondaryLinkLabel: "Neurodivergent body-doubling survey (PDF)",
@@ -142,7 +142,7 @@ export const copy = {
         title: "Savings collapse without systems",
         body: "Long ADHD outcome work linked to Barkley and colleagues tracks weaker saving, more financial dependence, and the “ADHD tax” of late fees and forgotten bills — executive function gaps, not laziness.",
         amanda:
-          "WhatsApp is the external scaffold: locks, clarity, and accountability happen where your habits already live.",
+          "The Amanda chat is the external scaffold: locks, clarity, and accountability happen in one place you already open.",
         linkLabel: "Altszuler et al. on financial dependence",
         href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4887412/",
         secondaryLinkLabel: "ADHD money tips (Tuckman / CHADD context)",
@@ -163,28 +163,28 @@ export const copy = {
         body: "Amanda breaks down your spends in plain language, so food, transfers, and noise stop hiding in your balance.",
         // Swap later: put a file in /public/mockups and set e.g. "/mockups/truth.png"
         mockup: "",
-        mockupAlt: "Amanda spend breakdown on WhatsApp",
+        mockupAlt: "Amanda spend breakdown in the Amanda app chat",
       },
       {
         label: "Hard time-lock",
         title: "Block transfers from 7PM to morning.",
         body: "When impulse is loudest, Amanda closes the door. No override. No “just this once.” Funds reopen in the morning.",
         mockup: "",
-        mockupAlt: "Amanda 7PM transfer lock on WhatsApp",
+        mockupAlt: "Amanda 7PM transfer lock in the Amanda app chat",
       },
       {
         label: "Stay accountable",
         title: "Track every spend as it happens.",
         body: "Every transfer gets caught in the chat. You always know what you spent today, and what’s left before 7PM.",
         mockup: "",
-        mockupAlt: "Amanda live spend tracking on WhatsApp",
+        mockupAlt: "Amanda live spend tracking in the Amanda app chat",
       },
       {
         label: "Save while you spend",
         title: "Grow your goal with every transfer out.",
         body: "Each spend can tuck a little away automatically, so saving happens in the same moment as spending.",
         mockup: "",
-        mockupAlt: "Amanda save-while-you-spend on WhatsApp",
+        mockupAlt: "Amanda save-while-you-spend in the Amanda app chat",
       },
     ],
   },
@@ -192,7 +192,7 @@ export const copy = {
   howItWorks: {
     headline: "How it works",
     steps: [
-      { title: "Say hello on WhatsApp", icon: "chat" },
+      { title: "Open Amanda", icon: "chat" },
       { title: "Set your savings goal", icon: "goal" },
       { title: "Move your money in", icon: "fund" },
       { title: "Live with the 7PM lock", icon: "lock" },
@@ -203,7 +203,7 @@ export const copy = {
   faq: {
     headline: "FAQ",
     blurb:
-      "Clear answers about Amanda, the WhatsApp savings agent from Amanda Technologies, how the hard lock works, and how your money stays protected with Rubies Microfinance Bank.",
+      "Clear answers about Amanda, the strict savings app from Amanda Technologies, how the hard lock works, and how your money stays protected with Rubies Microfinance Bank.",
     contactLabel: "Still have questions?",
     phone: "+234 707 706 9738",
     phoneNote: "WhatsApp support · Mon-Fri, 9AM-6PM WAT",
@@ -211,7 +211,7 @@ export const copy = {
       {
         question: "What is Amanda?",
         answer:
-          "Amanda is a strict savings AI agent built by Amanda Technologies that runs entirely on WhatsApp in Nigeria. It helps you understand spending, hard-locks outbound transfers when you are most likely to overspend, and keeps you accountable to savings goals. You do not need a separate banking app to talk to Amanda.",
+          "Amanda is a strict savings AI agent built by Amanda Technologies for Nigeria. It lives in a mobile app chat: it helps you understand spending, hard-locks outbound transfers when you are most likely to overspend, and keeps you accountable to savings goals.",
       },
       {
         question: "How does the 7PM lock work?",
@@ -221,32 +221,32 @@ export const copy = {
       {
         question: "Do I need to download another app?",
         answer:
-          "No. Amanda is a WhatsApp savings agent, so there is nothing new to install, remember, or abandon after a week. If you already use WhatsApp, you already have the surface Amanda lives on.",
+          "Yes. Amanda is its own app — a chat-first savings agent, not another cluttered banking dashboard. Open Amanda, talk to it like a partner, and the hard lock and spend clarity live there.",
       },
       {
         question: "Is my money safe with Amanda?",
         answer:
-          "Yes. Customer funds are held with Rubies Microfinance Bank. Amanda is the discipline and accountability layer on top of that banking relationship, not a place where money disappears into a black box. Amanda also supports WhatsApp privacy features and NDPC-aligned data protection practices.",
+          "Yes. Customer funds are held with Rubies Microfinance Bank. Amanda is the discipline and accountability layer on top of that banking relationship, not a place where money disappears into a black box. Amanda uses device locks, PINs, and NDPC-aligned data protection practices.",
       },
       {
         question: "Who is Amanda for?",
         answer:
-          "Amanda is for people in Nigeria who know they should save but keep negotiating with themselves: ADHD spenders, emotional spenders, salary burners, and anyone tired of budgeting apps they forget to open. If WhatsApp is already where your habits live, Amanda meets you there.",
+          "Amanda is for people in Nigeria who know they should save but keep negotiating with themselves: ADHD spenders, emotional spenders, salary burners, and anyone tired of budgeting apps they forget to open. If chat is already how you get things done, Amanda meets you there.",
       },
       {
         question: "What if I lose my phone?",
         answer:
-          "You can freeze your Amanda account instantly from the Block Account page on this site, using your WhatsApp phone number and PIN, from any WhatsApp-capable device. Amanda pauses payment activity and guides you through recovery before you unblock.",
+          "You can freeze your Amanda account instantly from the Block Account page on this site, then message support to unblock when you are ready. Amanda pauses payment activity and guides you through recovery.",
       },
       {
         question: "How do I join Amanda?",
         answer:
-          "Tap Join Amanda on this site, start a WhatsApp chat with Amanda, complete a short setup, set a savings goal, and move money in. After that, Amanda handles the hard lock and accountability so you do not have to rely on willpower alone.",
+          "Tap Join Amanda on this site to get started, complete a short setup, set a savings goal, and move money in. After that, Amanda handles the hard lock and accountability so you do not have to rely on willpower alone.",
       },
       {
         question: "Is Amanda an app or a bank?",
         answer:
-          "Amanda is not a standalone mobile app store download. It is a WhatsApp-based savings agent. Banking services and fund holding are provided through Rubies Microfinance Bank, while Amanda Technologies builds the product experience.",
+          "Amanda is a mobile savings app and AI chat. Banking services and fund holding are provided through Rubies Microfinance Bank, while Amanda Technologies builds the product experience.",
       },
     ],
   },
@@ -254,7 +254,7 @@ export const copy = {
   instantBlock: {
     eyebrow: "INSTANT BLOCK",
     headline: "Lost Your Phone? Secure Your Accounts Instantly",
-    body: "If your device is stolen or compromised, don't worry you can freeze your Amanda account right from any WhatsApp device. We'll pause all payment activity and guide you through recovery.",
+    body: "If your device is stolen or compromised, don't worry — you can freeze your Amanda account from this site and message support to recover. We'll pause all payment activity and guide you through recovery.",
     secondary: "Unblock Account",
     secondaryHref: whatsappIntentUrl(
       "Hi, I pressed Unblock Account. I want to unblock my Amanda account.",
@@ -265,7 +265,7 @@ export const copy = {
   security: {
     headline: "Banking-grade security",
     subhead:
-      "WhatsApp encryption, NDPC certification, and device-level locks so your money and chats stay yours.",
+      "Device locks, NDPC certification, and passcodes so your money and chats stay yours.",
     cards: [
       {
         title: "Passcode for Every Payment",
@@ -274,12 +274,12 @@ export const copy = {
       },
       {
         title: "NDPC-Certified & Private Chat Security",
-        body: "Amanda is certified by the Nigeria Data Protection Commission (NDPC), ensuring world-class security standards. Secure your Amanda chat by hiding it in a locked folder that only you can access using your phone's password or biometric ID.",
+        body: "Amanda is certified by the Nigeria Data Protection Commission (NDPC), ensuring world-class security standards. Secure your Amanda chat with your phone's password or biometric ID.",
         tone: "blue" as const,
       },
       {
         title: "Biometric Login for Extra Safety",
-        body: "Your Amanda activity is protected by your phone's unlock. Want even more privacy? Lock individual conversations with a single tap.",
+        body: "Your Amanda activity is protected by your phone's unlock. Want even more privacy? Lock the app with Face ID or your device passcode.",
         tone: "gold" as const,
       },
     ],
@@ -293,7 +293,7 @@ export const copy = {
   },
 
   footer: {
-    brandLine: "Amanda. Your strict savings partner, on WhatsApp.",
+    brandLine: "Amanda. Your strict savings partner, in the app.",
     product: [
       { label: "How It Works", href: "/#how-it-works" },
       { label: "Reviews", href: "/#reviews" },

@@ -3,9 +3,9 @@ export const siteConfig = {
   name: "Amanda",
   legalName: "Amanda Technologies",
   legalEntity: "Amanda Global Limited",
-  tagline: "Strict savings on WhatsApp",
+  tagline: "Strict savings in the app",
   description:
-    "Amanda is a strict savings AI agent on WhatsApp for Nigeria. It explains your spending, hard-locks transfers from 7PM until morning, and helps you build discipline without another app.",
+    "Amanda is a strict savings AI agent in a mobile app for Nigeria. It explains your spending, hard-locks transfers from 7PM until morning, and helps you build discipline through chat.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
     "https://www.useamanda.com",

@@ -14,7 +14,7 @@ export function SiteFacts() {
       </h2>
       <p className="mt-2 max-w-[70ch] text-[11px] leading-relaxed text-white/45">
         {siteConfig.description} Amanda is built for people who need systems, not
-        more willpower: hard locks, WhatsApp-native habits, and banking-grade
+        more willpower: hard locks, chat-native habits, and banking-grade
         security.{" "}
         <Link
           href="/about"
@@ -34,7 +34,7 @@ export function SiteFacts() {
       <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 text-[11px] lg:grid-cols-4">
         <div>
           <dt className="font-semibold text-white/70">Product</dt>
-          <dd className="mt-0.5 text-white/40">WhatsApp strict savings AI agent</dd>
+          <dd className="mt-0.5 text-white/40">Strict savings AI chat app</dd>
         </div>
         <div>
           <dt className="font-semibold text-white/70">Company</dt>

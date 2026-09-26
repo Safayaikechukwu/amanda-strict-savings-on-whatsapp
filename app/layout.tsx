@@ -37,7 +37,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Amanda | Strict savings AI on WhatsApp",
+    default: "Amanda | Strict savings AI in the app",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   keywords: [
     "Amanda",
     "strict savings",
-    "WhatsApp savings AI",
+    "savings AI app",
     "savings agent Nigeria",
     "7PM money lock",
     "Rubies Microfinance Bank",
@@ -72,20 +72,20 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Amanda | Strict savings AI on WhatsApp",
+    title: "Amanda | Strict savings AI in the app",
     description: siteConfig.description,
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Amanda | Strict savings AI on WhatsApp",
+        alt: "Amanda | Strict savings AI in the app",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amanda | Strict savings AI on WhatsApp",
+    title: "Amanda | Strict savings AI in the app",
     description: siteConfig.description,
     images: ["/og.png"],
     creator: siteConfig.twitterHandle,

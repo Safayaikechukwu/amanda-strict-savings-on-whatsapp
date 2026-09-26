@@ -1,293 +1,167 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import {
-  FAMILY_THREAD,
-  AMANDA_THREAD,
-} from "@/components/ui/heroWhatsAppData";
+import { AMANDA_THREAD } from "@/components/ui/heroWhatsAppData";
 
-export type HeroPhase = "list" | "family" | "amanda";
+export type HeroPhase = "chat";
 
 export type HeroAnimState = {
   phase: HeroPhase;
-  activeId: string;
-  familyCount: number;
   amandaCount: number;
   typing: boolean;
   done: boolean;
 };
 
 const INITIAL: HeroAnimState = {
-  phase: "list",
-  activeId: "family",
-  familyCount: 0,
+  phase: "chat",
   amandaCount: 0,
   typing: false,
   done: false,
 };
 
 const DONE: HeroAnimState = {
-  phase: "amanda",
-  activeId: "amanda",
-  familyCount: FAMILY_THREAD.length,
+  phase: "chat",
   amandaCount: AMANDA_THREAD.length,
   typing: false,
   done: true,
 };
 
-/** List beat — short so family/Amanda arrive while the user is looking */
-const LIST_MS = 600;
-const FAMILY_STEP_MS = 300;
-const FAMILY_HOLD_MS = 550;
-const AMANDA_USER_MS = 320;
-const AMANDA_TYPE_MS = 200;
-const AMANDA_REPLY_MS = 500;
-const AMANDA_GAP_MS = 260;
+const START_MS = 400;
+const USER_MS = 320;
+const TYPE_MS = 220;
+const REPLY_MS = 480;
+const GAP_MS = 240;
 
 type Keyframe = { at: number; state: HeroAnimState };
 
 function buildKeyframes(): Keyframe[] {
-  const frames: Keyframe[] = [
-    { at: 0, state: { ...INITIAL } },
-    {
-      at: LIST_MS,
-      state: {
-        phase: "family",
-        activeId: "family",
-        familyCount: 1,
-        amandaCount: 0,
-        typing: false,
-        done: false,
-      },
-    },
-  ];
-
-  let t = LIST_MS;
-  for (let i = 2; i <= FAMILY_THREAD.length; i += 1) {
-    t += FAMILY_STEP_MS;
-    frames.push({
-      at: t,
-      state: {
-        phase: "family",
-        activeId: "family",
-        familyCount: i,
-        amandaCount: 0,
-        typing: false,
-        done: false,
-      },
-    });
-  }
-
-  t += FAMILY_HOLD_MS;
-  frames.push({
-    at: t,
-    state: {
-      phase: "amanda",
-      activeId: "amanda",
-      familyCount: FAMILY_THREAD.length,
-      amandaCount: 0,
-      typing: false,
-      done: false,
-    },
-  });
+  const frames: Keyframe[] = [{ at: 0, state: { ...INITIAL } }];
+  let t = START_MS;
+  let count = 0;
 
   for (let i = 0; i < AMANDA_THREAD.length; i += 1) {
-    const msg = AMANDA_THREAD[i];
-    const n = i + 1;
-    if (msg.from === "amanda") {
-      t += AMANDA_TYPE_MS;
+    const bubble = AMANDA_THREAD[i]!;
+    const prev = AMANDA_THREAD[i - 1];
+    const isAmanda = bubble.from === "amanda";
+    const afterUser = prev?.from === "user";
+
+    if (isAmanda && afterUser) {
+      t += TYPE_MS;
       frames.push({
         at: t,
         state: {
-          phase: "amanda",
-          activeId: "amanda",
-          familyCount: FAMILY_THREAD.length,
-          amandaCount: n - 1,
+          phase: "chat",
+          amandaCount: count,
           typing: true,
           done: false,
         },
       });
-      t += AMANDA_REPLY_MS;
-      frames.push({
-        at: t,
-        state: {
-          phase: "amanda",
-          activeId: "amanda",
-          familyCount: FAMILY_THREAD.length,
-          amandaCount: n,
-          typing: false,
-          done: false,
-        },
-      });
-      t += AMANDA_GAP_MS;
+      t += REPLY_MS;
     } else {
-      t += AMANDA_USER_MS;
-      frames.push({
-        at: t,
-        state: {
-          phase: "amanda",
-          activeId: "amanda",
-          familyCount: FAMILY_THREAD.length,
-          amandaCount: n,
-          typing: false,
-          done: false,
-        },
-      });
+      t += i === 0 ? 0 : isAmanda ? REPLY_MS : USER_MS;
     }
+
+    count += 1;
+    frames.push({
+      at: t,
+      state: {
+        phase: "chat",
+        amandaCount: count,
+        typing: false,
+        done: false,
+      },
+    });
+    t += GAP_MS;
   }
 
-  t += 200;
-  frames.push({ at: t, state: { ...DONE } });
+  frames.push({
+    at: t,
+    state: { ...DONE },
+  });
+
   return frames;
 }
 
 const KEYFRAMES = buildKeyframes();
-const TOTAL_MS = KEYFRAMES[KEYFRAMES.length - 1]?.at ?? 0;
 
-function stateAt(elapsedMs: number): HeroAnimState {
-  if (elapsedMs < 0) return INITIAL;
-  let current = KEYFRAMES[0]!.state;
-  for (const frame of KEYFRAMES) {
-    if (elapsedMs >= frame.at) current = frame.state;
-    else break;
-  }
-  return current;
-}
-
-/* ── Module store (remount-safe) ── */
-
-let startTs: number | null = null;
-let state: HeroAnimState = INITIAL;
-let rafId = 0;
-let intervalId = 0;
+let state: HeroAnimState = { ...INITIAL };
+let raf = 0;
+let startAt = 0;
+let running = false;
 const listeners = new Set<() => void>();
 
 function emit() {
   listeners.forEach((l) => l());
 }
 
-function setState(next: HeroAnimState) {
-  const prev = state;
+function stateAt(elapsed: number): HeroAnimState {
+  let current = KEYFRAMES[0]!.state;
+  for (const frame of KEYFRAMES) {
+    if (elapsed >= frame.at) current = frame.state;
+    else break;
+  }
+  return current;
+}
+
+function tick(now: number) {
+  if (!running) return;
+  const elapsed = now - startAt;
+  const next = stateAt(elapsed);
   if (
-    prev.phase === next.phase &&
-    prev.activeId === next.activeId &&
-    prev.familyCount === next.familyCount &&
-    prev.amandaCount === next.amandaCount &&
-    prev.typing === next.typing &&
-    prev.done === next.done
+    next.amandaCount !== state.amandaCount ||
+    next.typing !== state.typing ||
+    next.done !== state.done
   ) {
-    return;
+    state = next;
+    emit();
   }
-  state = next;
+  if (!next.done) {
+    raf = requestAnimationFrame(tick);
+  } else {
+    running = false;
+  }
+}
+
+export function startHeroAnim() {
+  if (running) return;
+  running = true;
+  startAt = performance.now();
+  state = { ...INITIAL };
   emit();
+  raf = requestAnimationFrame(tick);
 }
 
-function advance() {
-  if (startTs == null) return;
-  const elapsed = performance.now() - startTs;
-  if (elapsed >= TOTAL_MS) {
-    setState(DONE);
-    stopLoop();
-    return;
-  }
-  setState(stateAt(elapsed));
-}
-
-function stopLoop() {
-  if (rafId) {
-    window.cancelAnimationFrame(rafId);
-    rafId = 0;
-  }
-  if (intervalId) {
-    window.clearInterval(intervalId);
-    intervalId = 0;
-  }
-}
-
-function startLoop() {
-  stopLoop();
-  // rAF for smooth foreground playback
-  const rafLoop = () => {
-    advance();
-    if (startTs != null && !state.done) {
-      rafId = window.requestAnimationFrame(rafLoop);
-    }
-  };
-  rafId = window.requestAnimationFrame(rafLoop);
-  // Interval backup — rAF is throttled in background tabs / some WebViews
-  intervalId = window.setInterval(advance, 80);
-}
-
-/** Clear clock so a new mount / hard navigation can replay. */
 export function resetHeroAnim() {
-  stopLoop();
-  startTs = null;
+  running = false;
+  if (raf) cancelAnimationFrame(raf);
+  raf = 0;
   state = { ...INITIAL };
   emit();
 }
 
-/**
- * Begin (or resume) the hero clock. Safe to call multiple times —
- * only the first call arms startTs.
- */
-export function startHeroAnim() {
-  if (typeof window === "undefined") return;
-  if (startTs != null) {
-    setState(stateAt(performance.now() - startTs));
-    if (!state.done && !intervalId) startLoop();
-    return;
-  }
-
-  startTs = performance.now();
-  setState(INITIAL);
-  startLoop();
-}
-
-/** Force finished Amanda (visibility failsafe). */
-export function forceHeroAnimDone() {
-  stopLoop();
-  startTs = typeof performance !== "undefined" ? performance.now() - TOTAL_MS : 0;
-  setState(DONE);
-}
-
-/** Only jump to done if still frozen on the empty list. */
+/** If the clock never advanced past empty, snap to finished thread. */
 export function forceHeroAnimDoneIfStuck() {
   if (state.done) return;
-  if (state.phase === "list" && state.familyCount === 0) {
-    forceHeroAnimDone();
-  }
+  if (state.amandaCount > 0) return;
+  running = false;
+  if (raf) cancelAnimationFrame(raf);
+  state = { ...DONE };
+  emit();
 }
 
 function subscribe(listener: () => void) {
   listeners.add(listener);
-  return () => {
-    listeners.delete(listener);
-  };
+  return () => listeners.delete(listener);
 }
 
 function getSnapshot() {
   return state;
 }
 
-function getServerSnapshot(): HeroAnimState {
+function getServerSnapshot() {
   return INITIAL;
 }
 
-/**
- * Shared hero WhatsApp animation. Clock is started explicitly when the
- * mock enters the viewport (see HeroProduct) — not on subscribe.
- */
-export function useHeroAnim(): HeroAnimState {
+export function useHeroAnim() {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-}
-
-/** Dev-only QA hooks (cold-load / remount checks). */
-if (typeof window !== "undefined" && process.env.NODE_ENV === "development") {
-  (window as unknown as { __heroAnim?: object }).__heroAnim = {
-    reset: resetHeroAnim,
-    start: startHeroAnim,
-    get: getSnapshot,
-    forceDone: forceHeroAnimDone,
-    totalMs: TOTAL_MS,
-  };
 }
