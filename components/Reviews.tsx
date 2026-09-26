@@ -16,28 +16,26 @@ const cards = [
     image: "/reviews/adhd.jpg",
   },
   {
-    tag: "Emotional eating",
+    tag: "Gift pressure",
     tagBg: "#fbf3db",
     tagDot: "#cb912f",
     quote:
-      "I was eating my feelings away and gained 30 kg because of how depressed I was. Amanda helped me not only lose weight but also save the money I've been spending on food.",
-    name: "Chioma Eze",
-    role: "Founder, Port Harcourt",
+      "I make around ₦3 million a month, but I couldn't keep it. People message me to beg, and I end up spending on gifts. With Amanda I just show them proof the money is locked. They stop asking, and it has saved me a lot.",
+    name: "Samuel Akpan",
+    role: "Regional Marketing Manager, Lagos State",
     overlay: "bg-[#c46a1b]/75",
-    image:
-      "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=900&q=80",
+    image: "/reviews/samuel-akpan.png",
   },
   {
-    tag: "Properties",
+    tag: "Freelance income",
     tagBg: "#f6eaea",
     tagDot: "#4a0508",
     quote:
-      "I'm 34, and I could not believe it when I went through my transaction history and saw that I've spent millions of naira but could not even account for shishi. Now Amanda helps me with stuff like that, and I was able to get my first property this year.",
-    name: "Tunde Balogun",
-    role: "Engineer, Abuja",
+      "As a freelancer the money comes in big, then it disappears for weeks. Amanda helps me treat a ₦2 million job like it has to last — I budget around ₦1 million and break it into monthly, weekly, and daily so I don't burn the whole thing at once.",
+    name: "Ngazi Promise",
+    role: "Freelancer, Lagos",
     overlay: "bg-[#4a0508]/75",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80",
+    image: "/reviews/ngazi-promise.png",
   },
 ] as const;
 
