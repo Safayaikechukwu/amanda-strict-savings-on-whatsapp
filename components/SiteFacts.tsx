@@ -41,7 +41,7 @@ export function SiteFacts() {
           <dd className="mt-0.5 text-white/40">{siteConfig.legalName}</dd>
         </div>
         <div>
-          <dt className="font-semibold text-white/70">Banking partner</dt>
+          <dt className="font-semibold text-white/70">Bank</dt>
           <dd className="mt-0.5 text-white/40">{siteConfig.bankingPartner}</dd>
         </div>
         <div>

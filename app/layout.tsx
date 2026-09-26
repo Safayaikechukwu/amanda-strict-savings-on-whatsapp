@@ -103,15 +103,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=8", sizes: "48x48" },
-      { url: "/favicon-32.png?v=8", type: "image/png", sizes: "32x32" },
-      { url: "/icon-192.png?v=8", type: "image/png", sizes: "192x192" },
-      { url: "/amanda-mark.png?v=8", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=9", sizes: "48x48" },
+      { url: "/favicon-32.png?v=9", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png?v=9", type: "image/png", sizes: "192x192" },
+      { url: "/amanda-mark.png?v=9", type: "image/png", sizes: "512x512" },
     ],
     apple: [
-      { url: "/apple-icon.png?v=8", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=9", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico?v=8",
+    shortcut: "/favicon.ico?v=9",
   },
   other: {
     "mobile-web-app-capable": "yes",

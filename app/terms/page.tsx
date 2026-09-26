@@ -121,7 +121,7 @@ export default function TermsPage() {
                 provides Artificial Intelligence (AI) and Natural Language
                 Processing (NLP) features to help people understand spending,
                 apply discipline rules such as transfer locks, and build savings
-                habits on WhatsApp, operated as a Amanda Technologies product.
+                habits on WhatsApp, operated as an Amanda Technologies product.
               </p>
               <p>
                 <strong className="font-semibold text-ink">AI nature:</strong> You
@@ -144,8 +144,8 @@ export default function TermsPage() {
 
       <FeatureSection
         id="funds"
-        title="3. Banking partner and funds."
-        subtitle="Amanda is the discipline layer. Customer funds sit with a licensed bank partner."
+        title="3. Bank and funds."
+        subtitle="Amanda is the discipline layer. Customer funds sit with a licensed bank."
       >
         <MidStage tone="soft">
           <div className="py-6 sm:py-8">

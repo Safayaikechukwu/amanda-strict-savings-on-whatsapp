@@ -102,7 +102,7 @@ export default function PrivacyPage() {
               </p>
               <p>
                 Amanda Global Limited (&quot;Amanda&quot;, &quot;we&quot;,
-                &quot;us&quot;, or &quot;our&quot;) operates Amanda as a Amanda
+                &quot;us&quot;, or &quot;our&quot;) operates Amanda as an Amanda
                 Technologies product. By using our services, you acknowledge the
                 practices described herein.
               </p>
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
               </p>
               <p>
                 <strong className="font-semibold text-ink">
-                  Banking partner:
+                  Bank:
                 </strong>{" "}
                 Customer funds related to Amanda savings are held with Rubies
                 Microfinance Bank. Rubies remains responsible for banking,

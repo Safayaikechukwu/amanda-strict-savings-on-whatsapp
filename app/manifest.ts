@@ -17,36 +17,36 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "en",
     icons: [
       {
-        src: "/icon-192.png?v=8",
+        src: "/icon-192.png?v=9",
         sizes: "192x192",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/icon-512.png?v=8",
+        src: "/icon-512.png?v=9",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",
       },
       {
-        src: "/icon-maskable-192.png?v=8",
+        src: "/icon-maskable-192.png?v=9",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "/icon-maskable-512.png?v=8",
+        src: "/icon-maskable-512.png?v=9",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "/apple-icon.png?v=8",
+        src: "/apple-icon.png?v=9",
         sizes: "180x180",
         type: "image/png",
       },
       {
-        src: "/amanda-mark.png?v=8",
+        src: "/amanda-mark.png?v=9",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",

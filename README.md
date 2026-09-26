@@ -72,8 +72,8 @@ Marketing copy lives in `lib/copy.ts`. Site metadata and canonical URL live in `
 | Path | Purpose |
 | --- | --- |
 | `/` | Marketing landing page |
-| `/account/block` | Freeze a Amanda account |
-| `/account/unblock` | Unfreeze a Amanda account |
+| `/account/block` | Freeze an Amanda account |
+| `/account/unblock` | Unfreeze an Amanda account |
 | `/api/subscribe` | Newsletter signup |
 
 ## License
